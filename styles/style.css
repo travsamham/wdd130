@@ -1,4 +1,121 @@
-* {
+.container {
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        'header header'
+        'aside main'
+        'footer footer';       
+}
+.header {
+    grid-area: header;
+    background-color: red;
+    align-content: center;
+    margin: 0;
+    border-bottom: 5px solid black;
+}
+.nestedheader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+.nestedheader a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.main {
+    grid-area: main;
+    /* background-color: grey; */
+    text-align: center;
+}
+.main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid black;
+    padding: var(--padding);
+    box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.main p {
+    width: 20rem;
+    margin: 1rem;
+    border: #000;
+    padding: 3px;
+    text-align: left;
+    font-family: var(--heading-font-family);
+}
+main {
+    display: flex;
+    /* border-left: 5px solid black; */
+}
+main ul {
+    text-align: left;
+}
+main h1 {
+    margin: 1rem;
+}
+.aside {
+    grid-area: aside;
+    /* background-color: yellow; */
+    width: fit-content;
+    position: relative;
+}
+.aside h2 {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+}
+.aside img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+aside p {
+    margin: 1rem;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    /* background-color: blue; */
+}
+.footer p {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    border-top: 5px solid black;
+    padding-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,25 +126,28 @@
     --heading-font-family: georgia, sans-serif;
     --padding: .1rem;
     --border: 1px solid rgb(0 0 0 / 0.1);
-    --text-align: center;
+    --text-align: center; */
 /* root is the css for the entire page, things you would use a lot */
-}
+/* }
 nav {
     background-color: var(--heading-background-color);
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 nav a {
     color: var(--heading-text-color);
     display: block;
-    padding: 20px;
+    padding: .5rem;
+    font-size: 1.2rem;
 }
-h1 {
+main h1 {
     color: var(--heading-background-color);
     margin: 1rem;
+    border-bottom: 5px solid 00100;
 }
-main {
-    max-width: 475px;
-    }
+
 main img {
     width: 150px;
     height: auto;
@@ -46,16 +166,8 @@ main p {
     text-align: left;
     font-family: var(--heading-font-family);
 }
-aside {
-	width: 22rem;
-	margin: auto;
-	border: #000;
-	padding: var(--padding);
-	color: black;
-    background-color: var(--heading-background-color);
-	text-align: var(--text-align);
-    position: relative;
-}
+
+
 aside img {
 	width: 320px;
 	height: auto;
@@ -66,21 +178,25 @@ aside h2 {
     left: 150px;
 }
 aside p {
-    width: 18rem;
+    display: flex;
+    justify-content: center;
+    width: 20px;
     margin: 1rem;
     border: #000;
     padding: 3px;
     text-align: var(--text-align);
     font-family: var(--heading-font-family);
 }
-footer {
-    width: auto;
-	margin-top: 20px;
-	border-top: 1px solid #000;
-	text-align: center;
-}
+header, footer {
+    max-width: 840px;
+    margin: 0 auto;
+    border-top: #000 solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 /* Class Selectors */
-.box {
+/* .box {
     margin: 1rem;
     border: 1px solid rgba(0,0,0,.1);
     padding: 1rem;
@@ -90,3 +206,17 @@ footer {
 .indent {
     padding-left: 1.2rem;
 }
+.grid {
+    display: grid;
+    align-items: center;
+}
+main {
+    grid-column: 2/3;
+    margin: 1rem;
+}
+aside {
+    width: 20rem;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+} */

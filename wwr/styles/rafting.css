@@ -14,72 +14,173 @@
     box-sizing: border-box;
     /* background-color: var(--heading-background-color); */
 }
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';   
+}
+.nestedgrid {
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'section1'
+    'section2'
+    'section3';
+}        
+header {
+    grid-area: header;
+}
 header a {
     padding: 0 10rem;
     background-color: #5B3822;
-    color: var(--heading-text-color); /* Use color variable for text */
-    text-decoration: none; /* Remove underline from links */
+    color: var(--heading-text-color); 
+    text-decoration: none; 
     border: none;
-
 }
-
-
+.section1 {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; 
+    margin: auto;
+    text-align: center;
+    color: white;
+    overflow: hidden; 
+}
+.section1 .background-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    display: block;
+}
+.section1 .overlay {
+    position: absolute;
+    top: 60%;
+    right: 3%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6); 
+    width: 70%; 
+    min-width: 300px; 
+    max-width: 1500px; 
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.section1 h1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap; 
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+.section1 .text {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    padding-right: .2rem;
+}
+.section1 .overlay img {
+    max-width: 300px; 
+    height: auto;
+    border-radius: 8px;
+}
 main {
     background-color: #C9A47C;
     max-width: 100%;
     border-bottom: 7px solid #000100;
     margin-bottom: 0;
 }
-main h2 {
-    padding-bottom: 1rem;
-}
-div h1 {
-    position: absolute;
-    left: 800px;
-    top: 250px;
-    color: white;
-    background-color: rgba(0,0,0,0.7);
-    padding: .5rem;
-}
-    
-article { 
-    position: absolute;
-    width: 550px;
-    left: 950px;
-    top: 400px;
+.nestedgrid .section2 {
+    grid-area: section2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-article img {
-   float: right;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
     padding: 1rem;
 }
-article p {
-    background-color: rgba(0,0,0,0.6);
-    color:#000100;
-    padding: 10px;
-    border-radius: 5px;
-    top: 500px;
-    color: var(--heading-text-color);
+.nestedgrid .content-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1700px;
+    gap: 20px;
 }
-section p {
-    padding: 0 28rem 1rem;
+.nestedgrid aside img {
+    max-width: 450px;
+    width: 30%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 5px;
+    object-fit: contain;
 }
-
-section img {
-    padding: 0;
-    margin: 10px 15px 25px;
-    box-shadow: 0 0 30px #000100;
+.nestedgrid aside .p-left {
+    width: 30%;
+    text-align: center;
+}
+.nestedgrid aside .p-right {
+    width: 30%;
+    text-align: center;
+}
+.nestedgrid .section3 {
+    grid-area: section3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    padding: 20px;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    gap: 15px;
+    width: 90%; 
+    justify-content: center;
+    padding-top: 10px;
+}
+.image-grid figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.image-grid img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    margin-bottom: .5rem;
 }
 footer {
+    grid-area: footer;
     background-color: #5B3822;
     padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 45%;
 }
 footer p {
     color: var(--heading-text-color);
+    padding-right: 5rem;
 }
 footer img{
-    padding: 2rem 6rem;
+    padding: 1rem;
     text-decoration: none;
+    padding-left: 5rem;
 }
 .flexboxOnParentDiv{
     width:100%;
@@ -90,8 +191,4 @@ footer img{
     justify-content:center;
     background-color: #5B3822;
   }
-.hero img{
-    display:block;
-    width: 350px;
-    height: auto;
-}
+
