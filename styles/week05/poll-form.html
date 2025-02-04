@@ -13,10 +13,14 @@
         <form>
             <fieldset>
                 <legend>Contact Infromation</legend>
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname">
-                <label for="useremail">email:</label>
-                <input type="email" id="useremail" email="useremail";>
+                <div>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div>
+                    <label for="useremail">Email:</label>
+                    <input type="email" id="useremail" name="useremail";>
+                </div>
             </fieldset>
             <fieldset>
                 <legend>Questions</legend>
@@ -28,14 +32,19 @@
                     <option value="edge">Edge</option>
                     <option value="yahoo">Yahoo</option>
                     <option value="safari">Safari</option>
+                    <option value="other">Other</option>
                 </select>
-                <label for="pet">Do you have a household pet?</label>
-                <input type="checkbox" id="pet" name="pet">
-                <label for="feedback">List the places you have lived:</label>
-                <textarea id="feedback" name="feedback" rows="4" placeholder="Syracuse, Layton, Kaysville, Roy"></textarea>
+                <div>
+                    <label for="pet">Do you have a household pet?</label>
+                    <input type="checkbox" id="pet" name="pet">
+                </div>
+                <div>
+                    <label for="feedback">List the places you have lived:</label>
+                    <textarea id="feedback" name="feedback" rows="4" placeholder="Syracuse, Layton, Kaysville, Roy"></textarea>
+                </div>
             </fieldset>
             <fieldset>
-                <button type="submit">Submit Pull</button>
+                <button type="submit">Submit Poll</button>
             </fieldset>
         </form>
     </main>
