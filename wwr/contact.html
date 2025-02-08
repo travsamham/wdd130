@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Travis Hammon">
+    <meta name="description" content="#">
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body class="container">
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.webp" alt="Company Logo" width="200">
+        </div>
+        <div>
+            <nav class="nav">
+                <a href="home.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <main class="nestedgrid">
+        <div class="image-grid">
+            <h1>Meet our team</h1>
+            <figure>
+                <img src="images/employeegirl.webp" alt="Owner">
+                <figcaption>Jane Doe owner and operator of Whit Water Rapids</figcaption>
+            </figure>
+            <figure>
+                <img src="images/happyrafters.webp" alt="happyrafters">
+                <figcaption>Our Tour Guilds</figcaption>
+            </figure>
+            <figure>
+                <img src="images/employeeguy.webp" alt="Manager">
+                <figcaption>John Doe our team manager</figcaption>
+            </figure>
+        </div>
+        <section>
+            <h2>We would love to hear from you!</h2>
+            <form>
+                <fieldset>
+                    <legend>Name:</legend>
+                    <label for="customer"></label>
+                    <input type="text" id="customer" name="customer">
+                </fieldset>
+                <fieldset>
+                    <legend>Email:</legend>
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email">
+                </fieldset>
+                <fieldset>
+                    <legend>Subject:</legend>
+                    <label for="general">
+                        <input type="radio" name="general" id="general">
+                        General Inquiry
+                    </label>
+                    <label for="reservation">
+                        <input type="radio" name="reservation" id="reservation">
+                        Reservation Question
+                    </label>
+                    <label for="website">
+                        <input type="radio" name="website" id="website">
+                        Website Suggestion
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Message:</legend>
+                    <label for="message"></label>
+                    <textarea id="message" name="message" rows="4" placeholder=""></textarea>
+                </fieldset>
+                <fieldset>
+                    <div class="checkbox-align">
+                        <label for="subscribe">Please subscribe me to the monthly newsletter:</label>
+                        <input type="checkbox" name="subscribe" id="subscribe" checked>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+            <div class="contact">
+                    <h2>Contact Information:</h2>
+                    <p>Address: 1234 N Imagination Lane</p>
+                    <p>Phone Number: 555-0123</p>
+                    <p>Email: whitewaterrafting@fakeemail.com</p>
+            </div>
+            <div class="frame">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17868.216693799324!2d-81.42592109454183!3d30.306316737952535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1738942724851!5m2!1sen!2sus"
+                width="250" height="200" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>    
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>©️2025 | White Water Rafting | Travis Hammon</p>
+            <a href="images/wireframe.png" target="_blank">Wireframe Link</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="images/facebookicon.webp" alt="Facebook">
+            </a>
+            <a href="https://x.com/?lang=en&mx=2" target="_blank">
+                <img src="images/twitter.webp" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="images/instagram.webp" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
