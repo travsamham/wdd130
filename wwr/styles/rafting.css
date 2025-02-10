@@ -22,7 +22,8 @@
         'header'
         'main'
         'footer';  
-    border: 3px solid black; 
+    border-top: 3px solid black; 
+    border-bottom: 3px solid black;
 }
 .nestedgrid {
     display: grid;
@@ -63,15 +64,15 @@ header a {
 .section1 {
     position: relative;
     width: 100%;
-    max-width: 1200px; 
-    margin: auto;
     text-align: center;
     color: white;
     overflow: hidden; 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .section1 .background-image {
     width: 100%;
-    height: auto;
+    height: 100vh;
     object-fit: cover; 
     display: block;
 }
@@ -94,7 +95,7 @@ header a {
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
     white-space: nowrap; 
     z-index: 10;
@@ -130,7 +131,22 @@ main {
     width: 100%;
     max-width: 100%;
     gap: 20px;
-    padding: 1rem;
+    padding: 0 1rem 1rem;
+}
+.section2 a {
+    color: black;
+    font-size: 3rem;
+}
+.section2 img {
+    max-width: 600px;
+    width: auto;
+    border: 3px solid black;
+}
+.section2 figcaption {
+    max-width: 600px;
+    width: auto;
+    text-align: left;
+    margin-top: .25rem;
 }
 .nestedgrid .content-row {
     display: flex;
@@ -165,6 +181,12 @@ main {
     align-items: center;
     text-align: center; 
     padding: 20px;
+    position: relative;
+}
+.section3 p {
+    width: auto;
+    max-width: 350px;
+    text-align: left;
 }
 .image-grid {
     display: grid;
@@ -173,6 +195,8 @@ main {
     width: 100%; 
     justify-content: space-evenly;
     padding-top: 10px;
+    position: relative;
+    margin: 1rem 0 1rem;
 }
 .image-grid figure {
     display: flex;
@@ -182,20 +206,33 @@ main {
 }
 .image-grid img {
     width: 100%;
-    max-width: 300px; 
+    max-width: 450px; 
     height: 100%;
-    max-height: 300px;
+    max-height: 450px;
     border-radius: 10px; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
-    margin: 3rem 0 .5rem;
+    margin: 3rem 1rem .5rem;
 }
 .image-grid h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
+.image-grid h2 {
+    position: absolute;
+}
 .image-grid figcaption {
     margin-bottom: 1rem;
+    max-width: 350px;
+    width: auto;
+    text-align: left;
+}
+.image-grid a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    top: 0;
 }
 footer {
     grid-area: footer;
@@ -312,4 +349,9 @@ button:hover {
 .checkbox-align {
     display: flex;
     align-items: center;
+}
+input[type="text"] {
+    text-align: left;
+    padding-left: 3px;
+    padding-right: 3px;
 }
