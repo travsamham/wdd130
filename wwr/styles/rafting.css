@@ -12,7 +12,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* background-color: var(--heading-background-color); */
 }
 .container {
     display: grid;
@@ -113,10 +112,8 @@ header a {
     height: auto;
     border-radius: 8px;
     object-fit: contain;
-    /* padding: 10px; */
 }
 main {
-    /* background-color: #C9A47C; */
     max-width: 100%;
     border: 3px solid #000100;
     margin-bottom: 0;
@@ -269,8 +266,6 @@ footer a {
 .contact {
     text-align: left;
     display: flex;
-    /* flex-wrap: wrap;
-    width: 500px; */
     margin: 1rem 1rem;
     justify-content: space-around;
     align-items: center;
@@ -308,7 +303,6 @@ legend {
     text-align: left;
     width: 100%;
     padding: .5rem 0 0;
-    /* border-top: solid black; */
 }
 fieldset {
     border: none;
